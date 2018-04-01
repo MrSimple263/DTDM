@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/StyleQLTT.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <title>Trang Quan Lí Tin Tức</title>
 </head>
@@ -18,7 +18,6 @@
         <tr>
             <th>Mã Tin Tức</th>
             <th>Tiêu Đề</th>
-            <th>Ngày đăng</th>
             <th></th>
             <th></th>
             <th></th>
@@ -28,19 +27,17 @@
         <tr>
             <td></td>
             <td></td>
-            <td></td>
             <td ></td>
             <td ></td>
-            <td ><a href="NewsAdd" ><span class="glyphicon glyphicon-plus"></span></a></td>
+            <td ><a href="addnews" ><span class="glyphicon glyphicon-plus"></span></a></td>
         </tr>
-        <c:forEach items="${listnews}" var="news">
+        <c:forEach items="${news}" var="news">
             <tr>
                 <td>${news.id}</td>
                 <td>${news.title}</td>
-                <td>${news.date}</td>
-                <td ><a href="NewsEdit?id=${news.id}" class="glyphicon glyphicon-pencil"></a></td>
-                <td ><a href="#" class="glyphicon glyphicon-remove" ></a></td>
-                <td ><a href="NewsAdd" ><span class="glyphicon glyphicon-plus"></span></a></td>
+                <td ><a href="updnews?id=${news.id}" class="glyphicon glyphicon-pencil"></a></td>
+                <td ><a href="#" class="glyphicon glyphicon-remove"></a></td>
+                <td ><a href="addnews" ><span class="glyphicon glyphicon-plus"></span></a></td>
             </tr>
         </c:forEach>
 
@@ -70,7 +67,7 @@
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="js/news_jsfile.js"></script>
 </body>

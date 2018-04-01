@@ -17,13 +17,13 @@ import java.io.IOException;
 public class NewsDelete {
     @Autowired
     News_DAO news_dao;
-    @RequestMapping(value = "/delnew",method = RequestMethod.GET)
+    @RequestMapping(value = "/delnews",method = RequestMethod.POST)
     public String addnews(Model model, HttpServletRequest request,
                           @RequestAttribute("file") MultipartFile[] file)
             throws IOException {
         request.setCharacterEncoding("UTF-8");
         String id=request.getParameter("id");
         news_dao.delete(id);
-        return "News_Add";
+        return "redirect:/listnews";
     }
 }

@@ -1,207 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Theme Made By www.w3schools.com - No Copyright -->
-    <title>Bootstrap Theme Company Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="css/Trangchu.css" rel="stylesheet" >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-        body {
-            font: 400 15px Lato, sans-serif;
-            line-height: 1.8;
-            color: #818181;
-        }
-        h2 {
-            font-size: 24px;
-            text-transform: uppercase;
-            color: blue;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-        h4 {
-            font-size: 19px;
-            line-height: 1.375em;
-            color: #303030;
-            font-weight: 400;
-            margin-bottom: 30px;
-        }
-        h3 {
-            font-size: 24px;
-            text-transform: uppercase;
-            text-align: center;
-            border-style: outset;
-            color:tomato;
-            font-weight: 600;
-            margin-bottom: 30px;
-            background-color: skyblue;
-        }
-        .jumbotron {
-            background-color:whitesmoke;
-            color: #fff;
-            padding: 70px 0px;
-            font-family: Montserrat, sans-serif;
-        }
 
-        .container-fluid {
-            padding: 60px 50px;
-        }
-        .bg-grey {
-            background-color: #f6f6f6;
-        }
-        .logo-small {
-            color: #f4511e;
-            font-size: 50px;
-        }
-        .logo {
-            color: #f4511e;
-            font-size: 200px;
-        }
-        .thumbnail {
-            padding: 0 0 15px 0;
-            border: none;
-            border-radius: 0;
-        }
-        .thumbnail img {
-            width: 100%;
-            height: 100%;
-            margin-bottom: 10px;
-        }
-        .carousel-control.right, .carousel-control.left {
-            background-image: none;
-            color: #f4511e;
-        }
-        .carousel-indicators li {
-            border-color: #f4511e;
-        }
-        .carousel-indicators li.active {
-            background-color: #f4511e;
-        }
-        .item h4 {
-            font-size: 19px;
-            line-height: 1.375em;
-            font-weight: 400;
-            font-style: italic;
-            margin: 70px 0;
-        }
-        .item span {
-            font-style: normal;
-        }
-        .panel {
-            border: 1px solid #f4511e;
-            border-radius:0 !important;
-            transition: box-shadow 0.5s;
-        }
-        .panel:hover {
-            box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-        }
-        .panel-footer .btn:hover {
-            border: 1px solid #f4511e;
-            background-color: #fff !important;
-            color: #f4511e;
-        }
-        .panel-heading {
-            color: #fff !important;
-            background-color: #f4511e !important;
-            padding: 25px;
-            border-bottom: 1px solid transparent;
-            border-top-left-radius: 0px;
-            border-top-right-radius: 0px;
-            border-bottom-left-radius: 0px;
-            border-bottom-right-radius: 0px;
-        }
-        .panel-footer {
-            background-color: white !important;
-        }
-        .panel-footer h3 {
-            font-size: 32px;
-        }
-        .panel-footer h4 {
-            color: #aaa;
-            font-size: 14px;
-        }
-        .panel-footer .btn {
-            margin: 15px 0;
-            background-color: #f4511e;
-            color: #fff;
-        }
-        .navbar {
-            margin-bottom: 0;
-            background-color: #f4511e;
-            z-index: 9999;
-            border: 0;
-            font-size: 12px !important;
-            line-height: 1.42857143 !important;
-            letter-spacing: 4px;
-            border-radius: 0;
-            font-family: Montserrat, sans-serif;
-        }
-        .navbar li a, .navbar .navbar-brand {
-            color: #fff !important;
-        }
-        .navbar-nav li a:hover, .navbar-nav li.active a {
-            color: #f4511e !important;
-            background-color: #fff !important;
-        }
-        .navbar-default .navbar-toggle {
-            border-color: transparent;
-            color: #fff !important;
-        }
-        footer .glyphicon {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: #f4511e;
-        }
-        .slideanim {visibility:hidden;}
-        .slide {
-            animation-name: slide;
-            -webkit-animation-name: slide;
-            animation-duration: 1s;
-            -webkit-animation-duration: 1s;
-            visibility: visible;
-        }
-        @keyframes slide {
-            0% {
-                opacity: 0;
-                transform: translateY(70%);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0%);
-            }
-        }
-        @-webkit-keyframes slide {
-            0% {
-                opacity: 0;
-                -webkit-transform: translateY(70%);
-            }
-            100% {
-                opacity: 1;
-                -webkit-transform: translateY(0%);
-            }
-        }
-        @media screen and (max-width: 768px) {
-            .col-sm-4 {
-                text-align: center;
-                margin: 25px 0;
-            }
-            .btn-lg {
-                width: 100%;
-                margin-bottom: 35px;
-            }
-        }
-        @media screen and (max-width: 480px) {
-            .logo {
-                font-size: 150px;
-            }
-        }
-    </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
@@ -218,31 +27,22 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="#">FOR AUTHOR</a></li>
-                <li><a href="#">PROGRAM</a></li>
-                <li><a href="#">PUBLICATION</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu" style="background-color:#f4511e">
-                        <li><a href="#">KEYNOTE SPEAKERS</a></li>
-                        <li><a href="#">VENUE & HOTEL</a></li>
-                        <li><a href="#">GALLERY</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+                <li><a href="/">ABOUT</a></li>
+                <li><a href="pagenews">POST NEWS</a></li>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" ><a href="login">LOGIN</a></button>
+                <!-- Modal -->
+    </div>
+    </ul>
+    </div>
     </div>
 </nav>
 
 <div class="jumbotron text-center">
     <div class="row">
-        <div class="col-sm-8">
-            <img src="image/banner.jpg">
+        <div class="col-md-8">
+            <img src="image/banner.jpg" class="img-responsive ">
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <marquee style="font-size:24px; color:red">IEEE INTERNATIONAL CONFERENCE ON SYSTEM SCIENCE AND ENGINEERING</marquee>
             <form>
                 <div class="input-group">
@@ -252,37 +52,6 @@
                     </div>
                 </div>
             </form>
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:10px;">LOGIN</button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-
-                    <!-- Modal content-->
-                    <div class="modal-content" style="margin-top:200px; color:tomato">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title" style="color:tomato">LOGIN</h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-login">
-                                <lable>UserName:</lable>
-                                <input>
-                            </div>
-                            <div class="form-login" style="margin-top:5px">
-                                <lable>PassWord :</lable>
-                                <input>
-                            </div>
-                            <button type="submit" style="margin-top:10px; background-color:rgb(37, 216, 248)">LOGIN</button>
-                        </div>
-                        <div class="modal-footer">
-                            <a href="Dangki.html"> Register here !!!</a>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -330,7 +99,7 @@
                 </div>
                 <div class="col-sm-8">
                     <h2><strong>WELCOME TO ICSSE 2017</strong></h2><br>
-                    <h4>System Science and Engineering has emerged as a research field that covers a wide spectrum of modern technology. A system can be considered as a collection of entities and their interrelationships gathered together to form a whole greater than the sum of the entities. It also involves people, organizations, cultures, activities and interrelationships among them. While systems composed of autonomous subsystems are not new, increased data density, connectivity and ubiquitous computational resources have increased their interdependence and interaction complexity. This has in turn made the already difficult job of planning, developing and deploying complex systems even more difficult.
+                    <h4>System Science and Engineering has emerged as a research field that covers a wide spectrum of modern technology. A system can be considered as a collection of entities and their interrelationships gathered together to form a whole greater than the sum of the entities. It also involves people, organizations, cultures, activities and interrelationships among them. While systems composed of autonomous subsystems are not new, increased data density, connectivity and ubiquitous computational resources have increased their interdependence and interaction complexity. This has in turn made the already difficult job of planning, developing and deploying complex systems even more difficult.</h4>
                         <h4> Technology advancement not only provides opportunities for improving system capabilities but also introduces development risks that must be weighed and managed. Thus, it is our goal to bring together scholars from all areas to have a forum to discuss, demonstrate and exchange research ideas in the scope of system science and engineering.</h4>
 
                         <h4> The International Conference on System Science and Engineering 2017 (ICSSE 2017) is an international conference that will take place in Ho Chi Minh City during July 21-23, 2017. This event will provide a great opportunity for scientists, engineers, and practitioners from all over the world to present the latest system design concepts, research results, developments and applications, as well as to facilitate interactions between scholars and practitioners. ICSSE 2017 will feature plenary speeches in emerging technology topics given by world renowned scholars. The proceedings of ICSSE 2017 will be published by the IEEE with EI indexing. In addition, selected high-quality papers will be published by special issues of SCI-indexed journals.</h4><br>
@@ -438,7 +207,7 @@
             <p>Lorem ipsum dolor sit amet..</p>
         </div>
         <div class="col-sm-4">
-            <a href="#"><img src="image/TASSE LOGO.jpg" style="width:200px;height:100px"></a>
+            <a href="#"><img src="TASSE LOGO.jpg" style="width:200px;height:100px"></a>
             <h4 style="color:#303030;">TASSE</h4>
             <p>Lorem ipsum dolor sit amet..</p>
         </div>
@@ -474,7 +243,7 @@
 </div>
 
 
-</script>
+<script>
 <footer class="container-fluid text-center">
     <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>

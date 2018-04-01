@@ -13,6 +13,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.util.List;
+
 @Controller
 public class NewsUpdate {
     @Autowired
@@ -28,12 +30,15 @@ public class NewsUpdate {
         news.setDes(request.getParameter("des"));
         news.setContent(request.getParameter("content"));
         news_dao.update(news);
-        return "redirect:/News_List";
+        return "redirect:/listnews";
     }
     @RequestMapping(value = "/updnews",method = RequestMethod.GET)
     public String upnews_get(Model model, HttpServletRequest request,
                           @RequestAttribute("file") MultipartFile[] file)
             throws IOException {
-        return "News_List";
+            String id=request.getParameter("id");
+        News news=news_dao.select_id(id);
+        model.addAttribute("news",news);
+            return "News_Update";
     }
 }
