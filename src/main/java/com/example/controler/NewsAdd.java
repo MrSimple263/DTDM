@@ -49,6 +49,6 @@ public class NewsAdd {
             file_dao.insert(link,idnews);
         }
         System.out.println(""+idnews);
-        return "News_Add";
+        return "redirect:/listnews";
     }
 }

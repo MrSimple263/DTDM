@@ -25,7 +25,7 @@ public class Login {
         String pass=request.getParameter("pass");
         boolean login=login_dao.login(username.trim(),pass.trim());
         if(login) {
-            return "redirect:/listnews";
+            return "dieuhuong";
         }
         return "exception";
     }

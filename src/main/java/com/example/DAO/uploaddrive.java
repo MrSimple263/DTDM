@@ -1,8 +1,10 @@
 package com.example.DAO;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -11,7 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class uploaddrive {
-    public List<String> doUpload(HttpServletRequest request, Model model, //
+
+        public List<String> doUpload(HttpServletRequest request, Model model, //
                          MultipartFile[] files, int idnews) {
 
 

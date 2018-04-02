@@ -5,18 +5,19 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Insert title here</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
 <form action="login" method="post">
     <label>Username</label>
     <br/>
-    <input type="text" name="username">
+    <input type="text" class=" col-md-3 from-control" name="username">
     <br/>
     <label>Password</label>
     <br/>
-    <input name="pass" type="text">
+    <input name="pass" class="col-md-3 form-control" type="password">
     <br/>
-    <input type="submit" name="submit" value="login">
+    <input type="submit" name="submit" value="login" class="col-md-3 form-control">
 </form>
 </body>
 </html>

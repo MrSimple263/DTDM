@@ -98,11 +98,7 @@
                     <span class="glyphicon glyphicon-globe logo slideanim"></span>
                 </div>
                 <div class="col-sm-8">
-                    <h2><strong>WELCOME TO ICSSE 2017</strong></h2><br>
-                    <h4>System Science and Engineering has emerged as a research field that covers a wide spectrum of modern technology. A system can be considered as a collection of entities and their interrelationships gathered together to form a whole greater than the sum of the entities. It also involves people, organizations, cultures, activities and interrelationships among them. While systems composed of autonomous subsystems are not new, increased data density, connectivity and ubiquitous computational resources have increased their interdependence and interaction complexity. This has in turn made the already difficult job of planning, developing and deploying complex systems even more difficult.</h4>
-                        <h4> Technology advancement not only provides opportunities for improving system capabilities but also introduces development risks that must be weighed and managed. Thus, it is our goal to bring together scholars from all areas to have a forum to discuss, demonstrate and exchange research ideas in the scope of system science and engineering.</h4>
-
-                        <h4> The International Conference on System Science and Engineering 2017 (ICSSE 2017) is an international conference that will take place in Ho Chi Minh City during July 21-23, 2017. This event will provide a great opportunity for scientists, engineers, and practitioners from all over the world to present the latest system design concepts, research results, developments and applications, as well as to facilitate interactions between scholars and practitioners. ICSSE 2017 will feature plenary speeches in emerging technology topics given by world renowned scholars. The proceedings of ICSSE 2017 will be published by the IEEE with EI indexing. In addition, selected high-quality papers will be published by special issues of SCI-indexed journals.</h4><br>
+                        ${about}
                         <strong>ICSSE PUBLISHED PROCEEDINGS</strong> </br>
                         <a href="http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=5540658" >ICSSE 2010</a>
                         <a href="http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=6246741"style="margin-left:15px">ICSSE 2012</a>

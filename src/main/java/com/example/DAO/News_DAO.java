@@ -38,7 +38,7 @@ public class News_DAO extends JdbcDaoSupport{
         this.getJdbcTemplate().update(SQL2,id);
     }
     public List<News> selectall(){
-        String SQL="select * from page";
+        String SQL="select * from page WHERE id<>1";
         List<News> news=new ArrayList<>();
         List<Map<String,Object>> rows=this.getJdbcTemplate().queryForList(SQL);
         for (Map row : rows) {
@@ -53,7 +53,7 @@ public class News_DAO extends JdbcDaoSupport{
         return news;
     }
     public List<News> select_title_des(){
-        String SQL="select id,title,des from page";
+        String SQL="select id,title,des from page WHERE id<>1";
         List<News> news=new ArrayList<>();
         List<Map<String,Object>> rows=this.getJdbcTemplate().queryForList(SQL);
         for (Map row : rows) {
@@ -70,7 +70,7 @@ public class News_DAO extends JdbcDaoSupport{
         return (String) this.getJdbcTemplate().queryForObject(SQL,String.class);
     }
     public News select_id(String id){
-        String SQL="select id,title,des,content from page";
+        String SQL="select id,title,des,content from page WHERE id<>1 AND id="+id+"";
         List<Map<String,Object>> rows=this.getJdbcTemplate().queryForList(SQL);
         News news1=new News();
         for (Map row : rows) {
